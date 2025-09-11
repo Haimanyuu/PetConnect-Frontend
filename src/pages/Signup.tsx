@@ -1,31 +1,35 @@
 import { useNavigate } from "react-router-dom";
 
-
 function Signup() {
   const navigate = useNavigate();
 
   const handleSendCode = () => {
-    // later you could add validation / API call here
-    navigate("/verify"); // go to OTP verification page
+    navigate("/verify");
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "2rem" }}>
-      <h2>Create Account</h2>
-      <input
-        type="text"
-        placeholder="Email or Phone"
-        style={{ display: "block", margin: "1rem auto", padding: "0.5rem" }}
-      />
-      <button
-        style={{ padding: "0.5rem 1rem" }}
-        onClick={handleSendCode}
-      >
-        Send Verification Code
-      </button>
-      <p style={{ marginTop: "1rem" }}>
-        By signing up, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.
-      </p>
+    <div className="app-container bg-gradient animate-fade-in">
+      <div className="card animate-slide-down">
+        <h2 className="title">Create Account</h2>
+        <p className="subtitle">Sign up to start connecting with pets and shelters.</p>
+
+        {/* Email / Phone Input */}
+        <input
+          type="text"
+          placeholder="Email or Phone"
+          className="input-field"
+        />
+
+        {/* Send OTP Button */}
+        <button onClick={handleSendCode} className="btn btn-primary">
+          Send Verification Code
+        </button>
+
+        {/* Terms & Privacy */}
+        <p style={{ fontSize: "0.875rem", color: "#6B7280", marginTop: "1rem" }}>
+          By signing up, you agree to our <a href="#" style={{ color: "#4F46E5", fontWeight: "600" }}>Terms</a> & <a href="#" style={{ color: "#4F46E5", fontWeight: "600" }}>Privacy Policy</a>.
+        </p>
+      </div>
     </div>
   );
 }

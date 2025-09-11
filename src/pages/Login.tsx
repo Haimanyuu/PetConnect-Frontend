@@ -1,70 +1,42 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
 
   const handleContinue = () => {
-    // TODO: Add validation or API call here if needed
-    navigate("/matches");
+    // Add validation or API call here if needed
+    navigate("/verify");
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "2rem" }}>
-      <h2>Login</h2>
-      <input
-        type="text"
-        placeholder="Email or Phone"
-        style={{
-          display: "block",
-          margin: "1rem auto",
-          padding: "0.5rem",
-          width: "80%",
-          maxWidth: "300px",
-        }}
-      />
-      <button
-        onClick={handleContinue}
-        style={{
-          margin: "0.5rem",
-          padding: "0.5rem 1rem",
-          backgroundColor: "#007bff",
-          color: "#fff",
-          border: "none",
-          borderRadius: "4px",
-          cursor: "pointer",
-        }}
-      >
-        Continue
-      </button>
-      <br />
-      <button
-        style={{
-          margin: "0.5rem",
-          padding: "0.5rem 1rem",
-          backgroundColor: "#f1f1f1",
-          border: "1px solid #ccc",
-          borderRadius: "4px",
-          cursor: "pointer",
-        }}
-      >
-        Continue with Google
-      </button>
-      <br />
-      <button
-        style={{
-          margin: "0.5rem",
-          padding: "0.5rem 1rem",
-          backgroundColor: "#f1f1f1",
-          border: "1px solid #ccc",
-          borderRadius: "4px",
-          cursor: "pointer",
-        }}
-      >
-        Continue with Apple
-      </button>
-      <p style={{ marginTop: "1rem" }}>
-        Don’t have an account? <a href="/signup">Sign Up</a>
-      </p>
+    <div className="app-container bg-gradient animate-fade-in">
+      <div className="card animate-slide-down">
+        <h2 className="title">Login</h2>
+        <p className="subtitle">Enter your email or phone number to continue</p>
+
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email or Phone"
+          className="input-field"
+        />
+
+        <button onClick={handleContinue} className="btn btn-primary">
+          Continue
+        </button>
+
+        <div className="btn-group" style={{ marginTop: "1rem" }}>
+          <button className="btn btn-secondary">Continue with Google</button>
+          <button className="btn btn-secondary">Continue with Apple</button>
+        </div>
+
+        <p style={{ fontSize: "0.875rem", color: "#6B7280", marginTop: "1rem" }}>
+          Don’t have an account? <a href="/signup" style={{ color: "#4F46E5" }}>Sign Up</a>
+        </p>
+      </div>
     </div>
   );
 }

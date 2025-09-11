@@ -1,33 +1,56 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function OtpVerification() {
   const navigate = useNavigate();
+  const [otp, setOtp] = useState("");
 
   const handleVerify = () => {
-    // later you could check OTP via backend
-    navigate("/intent"); // go to matches page
+    // Here you would call your backend API to verify OTP
+    navigate("/intent");
+  };
+
+  const handleResend = () => {
+    alert("OTP resent successfully!");
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-      <div className="bg-white p-6 rounded-xl shadow-md w-96">
-        <h2 className="text-2xl font-bold mb-4 text-center">Enter Verification Code</h2>
-        <p className="text-sm text-gray-600 mb-4 text-center">
+    <div className="app-container bg-gradient animate-fade-in">
+      <div className="card animate-slide-down">
+        <h2 className="title">Enter Verification Code</h2>
+        <p className="subtitle">
           OTP sent to <strong>user@email.com</strong>
         </p>
+
+        {/* OTP Input */}
         <input
           type="text"
+          value={otp}
+          onChange={(e) => setOtp(e.target.value)}
           placeholder="Enter OTP"
-          className="w-full p-2 border rounded mb-4"
+          className="input-field"
         />
-        <button
-          className="w-full bg-blue-600 text-white py-2 rounded mb-2"
-          onClick={handleVerify}
-        >
+
+        {/* Verify Button */}
+        <button onClick={handleVerify} className="btn btn-primary">
           Verify
         </button>
-        <p className="text-sm text-gray-500 text-center">
-          Didn’t get the code? <a href="#" className="text-blue-500">Resend OTP (30s)</a>
+
+        {/* Resend OTP */}
+        <p style={{ fontSize: "0.85rem", color: "#6B7280", marginTop: "1rem" }}>
+          Didn’t get the code?{" "}
+          <button
+            onClick={handleResend}
+            style={{
+              background: "none",
+              border: "none",
+              color: "#4F46E5",
+              cursor: "pointer",
+              fontWeight: 600,
+            }}
+          >
+            Resend OTP (30s)
+          </button>
         </p>
       </div>
     </div>

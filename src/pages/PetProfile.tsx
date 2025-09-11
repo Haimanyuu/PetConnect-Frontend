@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import "../App.css"; // make sure your path is correct
 
 const dummyPets = {
   buddy: {
@@ -27,57 +28,55 @@ function PetProfile() {
   const { petId } = useParams<{ petId: string }>();
   const navigate = useNavigate();
 
-  // Convert petId to lowercase and assert as PetId
   const petKey = petId?.toLowerCase() as PetId;
-
-  // Check if petKey exists in dummyPets
   const pet = petKey && dummyPets.hasOwnProperty(petKey) ? dummyPets[petKey] : undefined;
 
   if (!pet) {
     return (
-      <div style={{ padding: "2rem" }}>
-        <p>Pet not found.</p>
-        <button onClick={() => navigate(-1)}>Go Back</button>
+      <div className="app-container">
+        <div className="card animate-fade-in">
+          <p>Pet not found.</p>
+          <button
+            className="btn btn-secondary"
+            onClick={() => navigate(-1)}
+          >
+            Go Back
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
-    <div
-      style={{
-        padding: "2rem",
-        fontFamily: "sans-serif",
-        maxWidth: "600px",
-        margin: "auto",
-      }}
-    >
-      <button onClick={() => navigate(-1)} style={{ marginBottom: "1rem" }}>
-        ← Back
-      </button>
-      <img
-        src={pet.image}
-        alt={pet.name}
-        style={{ width: "100%", borderRadius: "12px", marginBottom: "1rem" }}
-      />
-      <h1>{pet.name}</h1>
-      <h3>
-        {pet.type} · {pet.age}
-      </h3>
-      <p style={{ marginTop: "1rem" }}>{pet.description}</p>
-      <button
-        style={{
-          marginTop: "2rem",
-          padding: "0.75rem 1.5rem",
-          backgroundColor: "#4caf50",
-          color: "#fff",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
-        }}
-        onClick={() => alert("Contact owner feature coming soon!")}
-      >
-        Contact Owner
-      </button>
+    <div className="app-container">
+      <div className="card animate-fade-in">
+        <button
+          className="btn btn-secondary"
+          onClick={() => navigate(-1)}
+          style={{ marginBottom: "1rem" }}
+        >
+          ← Back
+        </button>
+
+        <img
+          src={pet.image}
+          alt={pet.name}
+          style={{ width: "100%", borderRadius: "12px", marginBottom: "1rem" }}
+        />
+
+        <h1 className="title">{pet.name}</h1>
+        <h3 style={{ marginBottom: "1rem" }}>
+          {pet.type} · {pet.age}
+        </h3>
+        <p style={{ marginBottom: "2rem" }}>{pet.description}</p>
+
+        <button
+          className="btn btn-primary"
+          onClick={() => alert("Contact owner feature coming soon!")}
+        >
+          Contact Owner
+        </button>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
+import "./App.css"; // ← Make sure this is imported
+
 import Home from "./pages/Home.tsx";
 import Login from "./pages/Login.tsx";
 import Signup from "./pages/Signup.tsx";
@@ -8,6 +10,8 @@ import Matches from "./pages/Matches.tsx";
 import IntentSelection from "./pages/IntentSelection.tsx";
 import LocationPage from "./pages/Location.tsx";
 import PetProfile from "./pages/PetProfile.tsx";
+
+
 
 function App() {
   return (

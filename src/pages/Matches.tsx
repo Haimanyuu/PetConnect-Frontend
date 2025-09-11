@@ -9,22 +9,21 @@ const pets = [
 
 function Matches() {
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Your Matches</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {pets.map((pet) => (
-          <div key={pet.id} className="border rounded-lg p-4 shadow hover:shadow-lg transition">
-            <h3 className="text-lg font-semibold">{pet.name}</h3>
-            <p>{pet.type} · {pet.age}</p>
-            <p className="text-gray-500">{pet.distance} away</p>
-            <Link
-              to={`/pet/${pet.id}`}
-              className="mt-2 inline-block bg-green-500 text-white px-3 py-1 rounded"
-            >
-              View Profile
-            </Link>
-          </div>
-        ))}
+    <div className="app-container bg-gradient">
+      <div className="card animate-fade-in">
+        <h2 className="title mb-4">Your Matches</h2>
+        <div className="matches-grid">
+          {pets.map((pet) => (
+            <div key={pet.id} className="match-card">
+              <h3 className="subtitle">{pet.name}</h3>
+              <p>{pet.type} · {pet.age}</p>
+              <p className="subtitle">{pet.distance} away</p>
+              <Link to={`/pet/${pet.id}`} className="btn btn-primary mt-2">
+                View Profile
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
