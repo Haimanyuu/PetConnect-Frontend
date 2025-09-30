@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaPaw, FaHeart, FaCalendarAlt, FaDog, FaCat, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./LandingPage.css";
+import Header from "../components/Header"
+import Footer from "../components/Footer";
 
 
 export default function LandingPage() {
@@ -10,7 +12,7 @@ export default function LandingPage() {
 
     return (
         <div className="lp-container">
-            <Header navigate={navigate} />
+            <Header />
             <main className="lp-main">
                 <div className="hero-section">
                     <div className="hero-text">
@@ -22,6 +24,7 @@ export default function LandingPage() {
                             Find your perfect pet companion
                         </motion.h1>
                         <motion.p
+                            className="text-outline"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.4, duration: 0.7 }}
@@ -87,47 +90,5 @@ export default function LandingPage() {
             </main>
             <Footer />
         </div>
-    );
-}
-
-function Header({ navigate }: { navigate: (path: string) => void }) {
-    return (
-        <header className="lp-header">
-            <div className="header-left">
-                <span className="logo">🐾 PetConnect</span>
-            </div>
-            <nav className="header-nav">
-                <button onClick={() => navigate("/")}>Home</button>
-                <button onClick={() => navigate("/about")}>About</button>
-                <button onClick={() => navigate("/login")} className="nav-btn">Login</button>
-                <button onClick={() => navigate("/signup")} className="nav-btn-primary">Get Started</button>
-            </nav>
-        </header>
-    );
-}
-
-function Footer() {
-    return (
-        <footer className="lp-footer">
-            <div className="footer-top">
-                <div>
-                    <span className="logo">🐾 PetConnect</span>
-                    <p>Connecting Hearts. One Paw at a Time.</p>
-                </div>
-                <div className="footer-links">
-                    <a href="/about">About Us</a>
-                    <a href="/faq">FAQ</a>
-                    <a href="/contact">Contact</a>
-                </div>
-                <div className="footer-socials">
-                    <FaFacebook />
-                    <FaTwitter />
-                    <FaInstagram />
-                </div>
-            </div>
-            <div className="footer-bottom">
-                &copy; {new Date().getFullYear()} PetConnect. All rights reserved.
-            </div>
-        </footer>
     );
 }

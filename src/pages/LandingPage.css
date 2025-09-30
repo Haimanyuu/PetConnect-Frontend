@@ -1,22 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
-
-/* ===== Root Colors & Fonts ===== */
-:root {
-    --primary: #c6e4ec;      
-    --primary-dark: #6bb7cc; 
-    --secondary: #f8b679;    
-    --secondary-dark: #C2410C;
-    --text-dark: #1F2937;
-    --text-muted: #6B7280;
-    --bg-light: #FAFAFA;
-    --bg-footer: #111827;
-
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
-    --font-button: 'Poppins', sans-serif;
-}
-
 /* ===== Global Reset ===== */
 .lp-container, .lp-main, .lp-header, .lp-footer {
     margin: 0;
@@ -35,60 +16,6 @@
     letter-spacing: 0.5px;
 }
 
-/* ===== Header ===== */
-.lp-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-left .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--secondary);
-    font-family: var(--font-heading);
-    letter-spacing: 1px;
-}
-
-.header-nav button {
-    background: transparent;
-    border: none;
-    margin-left: 20px;
-    font-size: 1rem;
-    color: var(--text-dark);
-    cursor: pointer;
-    padding: 8px 12px;
-    transition: background-color 0.2s ease;
-    font-family: var(--font-button);
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-}
-
-.header-nav button:hover {
-    background-color: rgba(0,0,0,0.05);
-    border-radius: 4px;
-}
-
-.nav-btn-primary {
-    background-color: var(--secondary);
-    color: #FFFFFF;
-    border-radius: 4px;
-    padding: 8px 14px;
-    transition: background-color 0.2s ease;
-    font-family: var(--font-button);
-}
-
-.nav-btn-primary:hover {
-    background-color: var(--secondary-dark);
-}
 
 /* ===== Hero Section ===== */
 .hero-section {
@@ -257,57 +184,4 @@
     font-family: var(--font-heading);
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-/* ===== Footer ===== */
-.lp-footer {
-    background-color: var(--bg-footer);
-    color: #D1D5DB;
-    padding: 40px 20px;
-}
-
-.footer-top {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.lp-footer .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--secondary);
-    font-family: var(--font-heading);
-}
-
-.footer-links a {
-    display: block;
-    color: #D1D5DB;
-    text-decoration: none;
-    margin: 6px 0;
-    transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: var(--primary);
-}
-
-.footer-socials {
-    display: flex;
-    gap: 16px;
-    font-size: 1.5rem;
-    color: #9CA3AF;
-}
-
-.footer-socials svg:hover {
-    color: var(--secondary);
-    cursor: pointer;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.875rem;
 }

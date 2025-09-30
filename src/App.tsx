@@ -11,6 +11,8 @@ import IntentSelection from "./pages/IntentSelection.tsx";
 import LocationPage from "./pages/Location.tsx";
 import PetProfile from "./pages/PetProfile.tsx";
 import LandingPage from "./pages/LandingPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import FAQPage from "./pages/FAQPage";
 
 
 
@@ -19,13 +21,15 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<AboutUsPage />} />
+      <Route path="/faq" element={<FAQPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/verify" element={<OtpVerification />} />
       <Route path="/intent" element={<IntentSelection />} />
       <Route path="/location" element={<LocationPage />} />
       <Route path="/matches" element={<Matches />} />
-        <Route path="/pet/:petId" element={<PetProfile />} />
+      <Route path="/pet/:petId" element={<PetProfile />} />
     </Routes>
   );
 }
