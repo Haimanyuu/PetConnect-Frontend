@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import "./App.css"; // ← Make sure this is imported
+import "./App.css"; 
 
 import Home from "./pages/Home.tsx";
 import Login from "./pages/Login.tsx";
@@ -10,13 +10,15 @@ import Matches from "./pages/Matches.tsx";
 import IntentSelection from "./pages/IntentSelection.tsx";
 import LocationPage from "./pages/Location.tsx";
 import PetProfile from "./pages/PetProfile.tsx";
+import LandingPage from "./pages/LandingPage";
 
 
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/verify" element={<OtpVerification />} />

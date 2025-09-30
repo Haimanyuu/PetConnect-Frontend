@@ -1,0 +1,313 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* ===== Root Colors & Fonts ===== */
+:root {
+    --primary: #c6e4ec;      
+    --primary-dark: #6bb7cc; 
+    --secondary: #f8b679;    
+    --secondary-dark: #C2410C;
+    --text-dark: #1F2937;
+    --text-muted: #6B7280;
+    --bg-light: #FAFAFA;
+    --bg-footer: #111827;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-button: 'Poppins', sans-serif;
+}
+
+/* ===== Global Reset ===== */
+.lp-container, .lp-main, .lp-header, .lp-footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.lp-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Header ===== */
+.lp-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.header-nav button {
+    background: transparent;
+    border: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.2s ease;
+    font-family: var(--font-button);
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.header-nav button:hover {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.nav-btn-primary {
+    background-color: var(--secondary);
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 8px 14px;
+    transition: background-color 0.2s ease;
+    font-family: var(--font-button);
+}
+
+.nav-btn-primary:hover {
+    background-color: var(--secondary-dark);
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: linear-gradient(to right, var(--primary) 50%, var(--secondary) 50%);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--secondary-dark), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    color: #F3F4F6;
+    margin-bottom: 30px;
+    font-family: var(--font-body);
+    letter-spacing: 0.3px;
+}
+
+.hero-buttons button {
+    margin-right: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    font-family: var(--font-button);
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    color: var(--primary-dark);
+    border: 2px solid var(--primary-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-dark);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+/* ===== Stats Section ===== */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+/* ===== Features Section ===== */
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+.feature-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== Footer ===== */
+.lp-footer {
+    background-color: var(--bg-footer);
+    color: #D1D5DB;
+    padding: 40px 20px;
+}
+
+.footer-top {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.lp-footer .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+}
+
+.footer-links a {
+    display: block;
+    color: #D1D5DB;
+    text-decoration: none;
+    margin: 6px 0;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+    font-size: 1.5rem;
+    color: #9CA3AF;
+}
+
+.footer-socials svg:hover {
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.875rem;
+}
