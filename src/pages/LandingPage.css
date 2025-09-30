@@ -56,7 +56,9 @@
 }
 
 .hero-buttons button {
+    width: 100%;
     margin-right: 20px;
+    margin-top: 20px;
     padding: 12px 24px;
     font-size: 1rem;
     border: none;
