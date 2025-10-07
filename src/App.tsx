@@ -13,6 +13,7 @@ import PetProfile from "./pages/PetProfile.tsx";
 import LandingPage from "./pages/LandingPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import FAQPage from "./pages/FAQPage";
+import BrowsePets from "./pages/BrowsePets";
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<AboutUsPage />} />
+      <Route path="/browse" element={<BrowsePets />} />
       <Route path="/faq" element={<FAQPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
