@@ -15,6 +15,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import FAQPage from "./pages/FAQPage";
 import BrowsePets from "./pages/BrowsePets";
 import CreateListing from "./pages/CreateListing";
+import FosterRequests from "./pages/FosterRequests";
 
 
 
@@ -23,6 +24,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/createlist" element={<CreateListing />} />
+      <Route path="/fosterrequest" element={<FosterRequests />} />
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<AboutUsPage />} />
       <Route path="/browse" element={<BrowsePets />} />

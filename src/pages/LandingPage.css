@@ -1,5 +1,8 @@
 /* ===== Global Reset ===== */
-.lp-container, .lp-main, .lp-header, .lp-footer {
+.lp-container,
+.lp-main,
+.lp-header,
+.lp-footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -100,7 +103,7 @@
     width: 100%;
     max-width: 500px;
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     object-fit: cover;
 }
 
@@ -118,7 +121,7 @@
     background-color: #FFFFFF;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     text-align: center;
     width: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -126,7 +129,7 @@
 
 .stat-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .stat-icon {
@@ -163,14 +166,14 @@
     background-color: #FFFFFF;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
