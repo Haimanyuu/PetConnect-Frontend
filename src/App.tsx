@@ -16,6 +16,7 @@ import FAQPage from "./pages/FAQPage";
 import BrowsePets from "./pages/BrowsePets";
 import CreateListing from "./pages/CreateListing";
 import FosterRequests from "./pages/FosterRequests";
+import Dashboard from "./pages/Dashboard";
 
 
 
@@ -36,6 +37,8 @@ function App() {
       <Route path="/location" element={<LocationPage />} />
       <Route path="/matches" element={<Matches />} />
       <Route path="/pet/:petId" element={<PetProfile />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      
     </Routes>
   );
 }
