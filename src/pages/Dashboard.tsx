@@ -16,7 +16,7 @@ import VetDashboard from "./VetDashboard";
 const currentUser = {
   id: "u1",
   name: "Jivesh Malhotra",
-  role: "admin", // change to "adopter", "staff", "trainer", "vet" to test other dashboards
+  role: "staff", // change to "adopter", "staff", "trainer", "vet" to test other dashboards
 };
 
 export default function Dashboard() {
