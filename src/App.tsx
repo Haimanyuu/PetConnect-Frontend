@@ -17,7 +17,7 @@ import BrowsePets from "./pages/BrowsePets";
 import CreateListing from "./pages/CreateListing";
 import FosterRequests from "./pages/FosterRequests";
 import Dashboard from "./pages/Dashboard";
-
+import Chat from "./pages/Chat";
 
 
 function App() {
@@ -38,7 +38,8 @@ function App() {
       <Route path="/matches" element={<Matches />} />
       <Route path="/pet/:petId" element={<PetProfile />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      
+      <Route path="/chat" element={<Chat />} />
+
     </Routes>
   );
 }
