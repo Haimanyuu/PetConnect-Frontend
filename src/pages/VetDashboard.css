@@ -1,0 +1,860 @@
+/* VetDashboard.css - Complete Professional Version */
+.vet-dashboard {
+    min-height: 100vh;
+    background: #f8fafc;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Header */
+  .vet-dashboard-header {
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vet-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .vet-dashboard-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #059669;
+    margin: 0;
+  }
+  
+  .vet-info {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin: 0.25rem 0 0 0;
+  }
+  
+  .vet-header-actions {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .vet-refresh-btn, .vet-profile-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+  
+  .vet-refresh-btn {
+    background: #10b981;
+    color: white;
+  }
+  
+  .vet-refresh-btn:hover {
+    background: #059669;
+  }
+  
+  .vet-profile-btn {
+    background: #059669;
+    color: white;
+  }
+  
+  .vet-profile-btn:hover {
+    background: #047857;
+  }
+  
+  /* Stats Grid */
+  .vet-stats-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .vet-stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #059669;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .vet-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .vet-stat-card h3 {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  .vet-stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e293b;
+    margin: 0;
+  }
+  
+  .vet-stat-date {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  /* Main Section */
+  .vet-main-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Tabs */
+  .vet-tabs {
+    display: flex;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+  }
+  
+  .vet-tab {
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .vet-tab:hover {
+    color: #334155;
+    background: #f1f5f9;
+  }
+  
+  .vet-tab-active {
+    color: #059669;
+    border-bottom-color: #059669;
+    background: white;
+  }
+  
+  /* Tab Content */
+  .vet-tab-content {
+    padding: 0;
+  }
+  
+  .vet-tab-panel {
+    padding: 1.5rem;
+  }
+  
+  .vet-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .vet-section-header h2 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .vet-section-status {
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+  
+  /* Patients List */
+  .vet-patients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .vet-patient-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .vet-patient-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+  
+  .vet-patient-content {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .vet-patient-image {
+    flex-shrink: 0;
+  }
+  
+  .vet-pet-image {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .vet-pet-image-placeholder {
+    width: 6rem;
+    height: 6rem;
+    background: #e5e7eb;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-size: 0.75rem;
+  }
+  
+  .vet-patient-info {
+    flex: 1;
+  }
+  
+  .vet-patient-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .vet-patient-name {
+    margin: 0;
+    color: #059669;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .vet-status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .vet-status-available { background: #dcfce7; color: #166534; }
+  .vet-status-treatment { background: #fef3c7; color: #92400e; }
+  .vet-status-followup { background: #fee2e2; color: #dc2626; }
+  .vet-status-adopted { background: #dbeafe; color: #1e40af; }
+  .vet-status-unavailable { background: #f3f4f6; color: #6b7280; }
+  .vet-status-default { background: #f3f4f6; color: #6b7280; }
+  
+  .vet-patient-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .vet-detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+  }
+  
+  .vet-detail-label {
+    color: #6b7280;
+    font-weight: 500;
+  }
+  
+  .vet-health-notes {
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  
+  .vet-health-notes strong {
+    color: #1f2937;
+  }
+  
+  .vet-patient-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 120px;
+  }
+  
+  /* Action Buttons */
+  .vet-action-btn {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+  
+  .vet-action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vet-action-primary {
+    background: #059669;
+    color: white;
+  }
+  
+  .vet-action-primary:hover {
+    background: #047857;
+  }
+  
+  .vet-action-secondary {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .vet-action-secondary:hover {
+    background: #e2e8f0;
+  }
+  
+  /* Medical Records Grid */
+  .vet-medical-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .vet-medical-form-section, .vet-recent-records {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vet-medical-form-section h3, .vet-recent-records h3 {
+    margin: 0 0 1rem 0;
+    color: #1e293b;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .vet-medical-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Medications Section */
+  .vet-medications-section {
+    background: #f0f9ff;
+    border: 1px solid #e0f2fe;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+  }
+  
+  .vet-medications-section h4 {
+    margin: 0 0 1rem 0;
+    color: #0369a1;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .vet-medication-field {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .vet-medication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+  }
+  
+  .vet-remove-medication {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  .vet-remove-medication:hover {
+    background: #fef2f2;
+  }
+  
+  .vet-medication-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .vet-add-medication-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .vet-add-medication-btn:hover {
+    background: #2563eb;
+  }
+  
+  /* Form Styles */
+  .vet-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vet-form-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.375rem;
+  }
+  
+  .vet-form-select, .vet-form-input {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    font-family: inherit;
+    background-color: white;
+  }
+  
+  .vet-form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  .vet-form-select:focus, .vet-form-input:focus {
+    outline: none;
+    border-color: #059669;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+  }
+  
+  .vet-form-textarea {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .vet-form-textarea:focus {
+    outline: none;
+    border-color: #059669;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+  }
+  
+  .vet-primary-btn {
+    background: #059669;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+  }
+  
+  .vet-primary-btn:hover:not(:disabled) {
+    background: #047857;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  }
+  
+  .vet-primary-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .vet-form-submit {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Medical Records List */
+  .vet-records-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+  
+  .vet-record-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    transition: all 0.2s ease;
+  }
+  
+  .vet-record-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vet-record-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  .vet-record-header h4 {
+    margin: 0 0 0.25rem 0;
+    color: #059669;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .vet-record-date {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .vet-urgency-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .vet-urgency-low { background: #dcfce7; color: #166534; }
+  .vet-urgency-medium { background: #fef3c7; color: #92400e; }
+  .vet-urgency-high { background: #fed7aa; color: #c2410c; }
+  .vet-urgency-critical { background: #fecaca; color: #dc2626; }
+  
+  .vet-record-details {
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  
+  .vet-record-details p {
+    margin: 0.5rem 0;
+  }
+  
+  .vet-record-medications {
+    margin: 0.75rem 0;
+  }
+  
+  .vet-medication-display {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  
+  .vet-next-checkup {
+    color: #059669;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f3f4f6;
+  }
+  
+  /* Vaccinations Grid */
+  .vet-vaccinations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .vet-vaccination-form-section, .vet-overdue-vaccinations {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vet-vaccination-form-section h3, .vet-overdue-vaccinations h3 {
+    margin: 0 0 1rem 0;
+    color: #1e293b;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .vet-vaccination-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Vaccinations List */
+  .vet-vaccinations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .vet-vaccination-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    transition: all 0.2s ease;
+  }
+  
+  .vet-vaccination-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vet-vaccination-overdue {
+    border-left: 4px solid #ef4444;
+    background: #fef2f2;
+  }
+  
+  .vet-vaccination-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+  
+  .vet-vaccination-header h4 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .vet-overdue-badge {
+    background: #ef4444;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .vet-vaccination-card p {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  
+  /* Empty States */
+  .vet-empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #6b7280;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    border: 1px dashed #d1d5db;
+  }
+  
+  .vet-empty-state p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  
+  /* Loading States */
+  .vet-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 1.125rem;
+    color: #6b7280;
+  }
+  
+  .vet-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+  }
+  
+  .vet-loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 4px solid #f3f4f6;
+    border-left: 4px solid #059669;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .vet-medical-grid,
+    .vet-vaccinations-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .vet-header-content {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+    
+    .vet-header-actions {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .vet-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+    
+    .vet-tabs {
+      flex-direction: column;
+    }
+    
+    .vet-tab {
+      text-align: center;
+      border-bottom: none;
+      border-left: 2px solid transparent;
+    }
+    
+    .vet-tab-active {
+      border-bottom: none;
+      border-left: 2px solid #059669;
+    }
+    
+    .vet-patient-content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .vet-patient-image {
+      align-self: center;
+    }
+    
+    .vet-patient-actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .vet-patient-details {
+      grid-template-columns: 1fr;
+    }
+    
+    .vet-medication-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .vet-main-section {
+      margin: 0 1rem 2rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .vet-dashboard-header {
+      padding: 1rem;
+    }
+    
+    .vet-dashboard-title {
+      font-size: 1.5rem;
+    }
+    
+    .vet-stats-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .vet-header-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .vet-header-actions button {
+      width: 100%;
+    }
+    
+    .vet-tab-panel {
+      padding: 1rem;
+    }
+    
+    .vet-section-header {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+  }
+
+  .vet-booster-notice {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #0369a1;
+  }
+  
+  .vet-booster-notice p {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
